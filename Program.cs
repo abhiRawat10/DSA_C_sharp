@@ -7,6 +7,12 @@
             Console.WriteLine("Press 1 to flip coin n times");
             Console.WriteLine("Press 2 to find calculate  Leap year");
             Console.WriteLine("Press 3 to print table of 2");
+            Console.WriteLine("Press 4 to find max subarray sum using Kadane's algorithm");
+            Console.WriteLine("Press 5 to find missing number in array");
+            Console.WriteLine("Press 6 to move zeroes to end of array");
+            Console.WriteLine("Press 7 to find intersection of 2 arrays");
+            Console.WriteLine("Press 8 to find pair with given sum in array");
+
             switch (Console.ReadLine())
             {
                 case "1":
