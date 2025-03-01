@@ -31,7 +31,9 @@ namespace _6_DSA
             {
                 toAdd.next = head;
                 head.Prev = toAdd;
+
                 head = toAdd;
+
                 head.Prev = tail;
                 tail.next = head;
             }
@@ -51,7 +53,9 @@ namespace _6_DSA
             {
                 tail.next = toAdd;
                 toAdd.Prev = tail;
+
                 tail = toAdd;
+
                 head.Prev = tail;
                 tail.next = head;
             }

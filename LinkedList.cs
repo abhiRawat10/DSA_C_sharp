@@ -107,14 +107,15 @@ namespace _6_DSA
             }
             Node toAdd = new Node(data);
             Node current = head;
-            for (int i = 0; i < index - 1; i++)
+            for (int i = 0; i < index - 1; i++)//0 indexed and we have to be just before index
             {
                 current = current.next;
             }
             toAdd.next = current.next;
-            toAdd.Prev = current;
-            current.next.Prev = toAdd;
+            toAdd.next.Prev = toAdd;
+
             current.next = toAdd;
+            toAdd.Prev = current;
             count++;
         }
 
