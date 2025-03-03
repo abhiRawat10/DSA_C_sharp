@@ -76,7 +76,8 @@ namespace _6_DSA {
         public void Remove(string value)
         {
             if (head == null) return;
-            if (head.Data is string && head.Data.ToString().Equals(value, StringComparison.OrdinalIgnoreCase))
+
+            if (head.Data is string && head.Data.ToString().Equals(value, StringComparison.OrdinalIgnoreCase)) //not case sensitive
             {
                 head = head.Next;
                 if (head != null) head.Prev = null;
