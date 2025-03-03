@@ -14,6 +14,11 @@ namespace _6_DSA {
             Name = name;
             Age = age;
         }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Age: {Age}";
+        }
     }
     class Node<T>
     {

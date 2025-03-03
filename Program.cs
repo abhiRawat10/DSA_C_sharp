@@ -47,7 +47,7 @@
                         string name = Console.ReadLine();
                         Console.WriteLine("Enter the age of the student");
                         int age = Convert.ToInt32(Console.ReadLine());
-                        list.Add(new(name, age));
+                        list.Add(new Student(name, age));
                         break;
                     case "2":
                         Console.WriteLine("Enter the name of the student to remove");
@@ -57,8 +57,6 @@
                     case "3":
                         list.Display();
                         break;
-                    case "4":
-                        return;
                 }
                 Console.WriteLine("Press q to exit or any other key to continue");
                 if (Console.ReadLine() == "q")
