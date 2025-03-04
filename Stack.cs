@@ -14,16 +14,9 @@ namespace _6_DSA
 
         public void Push(T item)
         {
-            if (Size == 0)
-            {
-                top= item;
-            }
-            else
-            {
-                stack.AddFirst(item);
-                top = item;
-            }
+            stack.AddFirst(item);
             Size++;
+            top=item;
         }
 
         public void Pop()
