@@ -77,7 +77,8 @@ namespace _6_DSA {
         {
             if (head == null) return;
 
-            if (head.Data is string && head.Data.ToString().Equals(value, StringComparison.OrdinalIgnoreCase)) //not case sensitive
+            // Check the head node separately
+            if (head.Data is Student student && student.Name.Equals(value, StringComparison.OrdinalIgnoreCase))
             {
                 head = head.Next;
                 if (head != null) head.Prev = null;
@@ -86,18 +87,25 @@ namespace _6_DSA {
             }
 
             Node<T> temp = head;
-            while (temp != null && !(temp.Data is string && temp.Data.ToString().Equals(value, StringComparison.OrdinalIgnoreCase)))
+            while (temp != null)
             {
+                // Ensure temp.Data is a Student before accessing Name
+                if (temp.Data is Student s && s.Name.Equals(value, StringComparison.OrdinalIgnoreCase))
+                {
+                    break; // Found the matching node, exit loop
+                }
                 temp = temp.Next;
             }
 
-            if (temp == null) return;
+            if (temp == null) return; // Value not found
 
+            // Remove the node
             if (temp.Next != null) temp.Next.Prev = temp.Prev;
-            if (temp == tail) tail = temp.Prev; //means temp.net is null ,,&& dont care about deleted prev here
+            if (temp == tail) tail = temp.Prev; // If deleting the last node, update tail
 
-            if (temp.Prev != null) temp.Prev.Next = temp.Next;//sets prev for both upper conditions
+            if (temp.Prev != null) temp.Prev.Next = temp.Next; // Connect previous node to the next node
         }
+
     }
 
 }
