@@ -2,6 +2,5 @@
 
 This repository is dedicated to Data Structures and Algorithms (DSA). Here, you will find various branches covering different DSA topics.
 
-## Branches
-- **array**: Contains solutions and concepts related to array problems.
-- **string**: Covers problems and techniques related to string manipulation.
+## About this Branches
+ This branch contains MergeSort, Insertion Sort ,Selection Sort and Bubble Sort.
