@@ -13,14 +13,14 @@ namespace _6_DSA
             int n=arr.Length;
             for(int i = 0; i < n; i++)
             {
-                int max = 0;
-                for(int j = 0; j < n - i;j++)
+                int min = i;
+                for(int j = i+1; j < n;j++)
                 {
-                    if(arr[j] > arr[max])max=j;
+                    if(arr[j] < arr[min])min=j;
                 }
-                int temp = arr[n - i - 1];
-                arr[n - i - 1] = arr[max];
-                arr[max] = temp;
+                int temp = arr[i];
+                arr[i] = arr[min];
+                arr[min] = temp;
 
             }
         }
